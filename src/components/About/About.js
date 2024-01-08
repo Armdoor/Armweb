@@ -92,11 +92,14 @@ background-color: rgba(255, 255, 255, 0.5);`
 
 
 const DownArrow = styled.img`
-
-  width: 40px;
-  height:40px;
-  display: flex;
-  justify-content: center;
-  overflow-x: hidden;
-  animation: animateDown infinite 1.5s;
+width: 40px;
+height: 40px;
+position: absolute;
+bottom: 20px; /* Adjust this value based on your preference */
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+justify-content: center;
+overflow-x: hidden;
+animation: animateDown infinite 1.5s;
 `

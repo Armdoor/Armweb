@@ -94,11 +94,14 @@ const Button = styled.div`
 `;
 
 const DownArrow = styled.img`
-  width: 40px;
-  height: 40px;
+bottom: 10px;
+left: 50%;
+transform: translateX(-50%);
+width: 40px;
+height: 40px;
+display: flex;
+justify-content: center;
+overflow-x: hidden;
+animation: animateDown infinite 1.5s;
 
-  display: flex;
-  justify-content: center;
-  overflow-x: hidden;
-  animation: animateDown infinite 1.5s;
 `
