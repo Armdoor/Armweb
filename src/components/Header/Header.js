@@ -4,16 +4,16 @@ import styled from 'styled-components';
 const Header = () => {
   return (
     <Container>
-      <a>
+
         <Logo src='/images/logon.png' alt='logo' />
-      </a>
+
       <Menu>
         <nav>
           <ul>
-            <li><a href='#'>Home</a></li>
-            <li><a href='#'>About</a></li>
-            <li><a href='#'>Links</a></li>
-            <li><a href='#'>Contact</a></li>
+            <li>Home</li>
+            <li>About</li>
+            <li>Links</li>
+            <li>Contact</li>
           </ul>
         </nav>
       </Menu>
