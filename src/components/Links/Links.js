@@ -1,30 +1,44 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade';
+
+
 const Links = () => {
   return (
       <Container>
+        <Fade top>
         <TextArea>
             <h2>Work</h2>
         </TextArea>
+        </Fade>
         <Buttons>
+            <Fade left>
             <Button>
                 <img src="/images/resume.png" alt='Resume'  href="https://github.com/Armdoor/Resume/blob/main/Final_res.pdf"></img>
                 
             </Button>
+            </Fade>
+            <Fade left>
             <Button>
                 <img src="/images/git.png" alt='Github'  href="https://github.com/Armdoor"></img>
                 
             </Button>
+            </Fade>
+            <Fade right>
             <Button>
                 <img src="/images/linkedin.png" alt='Linkedin'  href="https://www.linkedin.com/in/akshit-sanoria/"></img>
                 
             </Button>
+            </Fade>
+            <Fade right>
             <Button>
                 <img src="/images/school.png" alt='Resume'  href="#"></img>
                 
             </Button>
+            </Fade>
         </Buttons>
-        
+        <DownArrow src = '/images/arrow.png'/>
+
       </Container>
   )
 }
@@ -71,9 +85,18 @@ const Button = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0.75rem; 
-
   img {
     height: 150px; 
     width: 150px; 
   }
 `;
+
+const DownArrow = styled.img`
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  animation: animateDown infinite 1.5s;
+`

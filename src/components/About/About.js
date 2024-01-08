@@ -1,14 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import Fade from 'react-reveal/Fade';
 const About = () => {
   return (
      <Container>
+        <Fade top>
         <TextItem>
             <h1>What I Do? </h1>
             <p> Your MOM</p>
         </TextItem>
+        </Fade>
+        
         <Cards>
+        <Fade bottom>
             <Card>
                 <img src='/images/ios.png' alt='apple'/>
                 <h2>Ios </h2>  
@@ -24,7 +28,13 @@ const About = () => {
                 <h2>Machine Learning and Data Science </h2>  
                 <p>Yes this too</p>
             </Card>
+            </Fade>
         </Cards>
+
+
+          
+          <DownArrow src = '/images/arrow.png'/>
+
      </Container>
   )
 }
@@ -73,3 +83,14 @@ border-radius: 0.5rem;
 backdrop-filter: blur(2px);
 background-color: rgba(255, 255, 255, 0.5);`
 
+
+
+const DownArrow = styled.img`
+
+  width: 40px;
+  height:40px;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  animation: animateDown infinite 1.5s;
+`

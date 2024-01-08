@@ -1,18 +1,23 @@
 import React from 'react';
-
+import Fade from 'react-reveal/Fade';
 import styled from 'styled-components';
 
 const Home = () => {
   return (
       <Wrap>
         <ItemText>
-          <h2 style={{ fontSize: '1.75rem', fontWeight: '800' }}>Hello,</h2>
-          <h1 style={{ fontSize: '3rem' }}>I'm <HighlightedText>Aarambh</HighlightedText></h1>
-          Computer Science Student
-          <p style={{ fontSize: 'large', fontWeight: '520', paddingBottom: '15px'}}>At University of Maryland, College Park.</p>
-          <StoryButton>
-              My Story
-          </StoryButton>
+          <Fade top>
+            <h2 style={{ fontSize: '1.75rem', fontWeight: '800' }}>Hello,</h2>
+            <h1 style={{ fontSize: '3rem' }}>I'm <HighlightedText>Aarambh</HighlightedText></h1>
+            Computer Science Student
+            <p style={{ fontSize: 'large', fontWeight: '520', paddingBottom: '15px'}}>At University of Maryland, College Park.</p>
+          </Fade>
+          <Fade bottom>
+            <StoryButton>
+                My Story
+            </StoryButton>
+          </Fade>
+          
         </ItemText>
         <Buttons>
           
@@ -51,9 +56,7 @@ const HighlightedText = styled.span`
   color: red;
 `;
 
-const Buttons = styled.div`
-padding-top: 92.5vh;
-text-align: center;`;
+
 
 const StoryButton = styled.div`
   background-color: rgba(23, 26, 32, 0.8);  
@@ -69,6 +72,10 @@ const StoryButton = styled.div`
   font-size: 18px;
   cursor: pointer;
 `;
+
+const Buttons = styled.div`
+padding-top: 92.5vh;
+text-align: center;`;
 
 const DownArrow = styled.img`
 
