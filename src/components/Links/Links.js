@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
-
+import { Link as ScrollLink } from 'react-scroll';
 
 const Links = () => {
   return (
-      <Container>
+      <Container id='link'>
         <Fade top>
         <TextArea>
             <h2>Work</h2>
@@ -37,7 +37,9 @@ const Links = () => {
             </Button>
             </Fade>
         </Buttons>
-        <DownArrow src = '/images/arrow.png'/>
+        <ScrollLink to="contact" spy={true} smooth={true} offset={-70} duration={500}>
+          <DownArrow src = '/images/arrow.png'/>
+        </ScrollLink>
 
       </Container>
   )

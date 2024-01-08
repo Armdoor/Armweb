@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
+import { Link as ScrollLink } from 'react-scroll';
 const About = () => {
   return (
-     <Container>
+     <Container id='about'>
         <Fade top>
         <TextItem>
             <h1>What I Do? </h1>
@@ -32,8 +33,13 @@ const About = () => {
         </Cards>
 
 
-          
-          <DownArrow src = '/images/arrow.png'/>
+        <ScrollLink
+              to="link"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}>
+          <DownArrow src = '/images/arrow.png'/></ScrollLink>
 
      </Container>
   )

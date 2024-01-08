@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import { Link as ScrollLink } from 'react-scroll';
 const Header = () => {
   return (
     <Container>
@@ -10,10 +10,10 @@ const Header = () => {
       <Menu>
         <nav>
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Links</li>
-            <li>Contact</li>
+            <li> <ScrollLink to="home" spy={true} smooth={true} offset={-70} duration={500}>Home</ScrollLink></li>
+            <li><ScrollLink to="about" spy={true} smooth={true} offset={-70} duration={500}>About</ScrollLink></li>
+            <li><ScrollLink to="link" spy={true} smooth={true} offset={-70} duration={500}>Links</ScrollLink></li>
+            <li><ScrollLink to="contact" spy={true} smooth={true} offset={-70} duration={500}>Contact</ScrollLink></li>
           </ul>
         </nav>
       </Menu>
@@ -51,6 +51,7 @@ const Menu = styled.div`
         text-transform: uppercase;
         padding: 0 10px;
         flex-wrap: nowrap;
+        cursor: pointer;
       }
     }
   }

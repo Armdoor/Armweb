@@ -1,10 +1,11 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 import styled from 'styled-components';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Home = () => {
   return (
-      <Wrap>
+      <Wrap id='home'>
         <ItemText>
           <Fade top>
             <h2 style={{ fontSize: '1.75rem', fontWeight: '800' }}>Hello,</h2>
@@ -20,8 +21,14 @@ const Home = () => {
           
         </ItemText>
         <Buttons>
-          
+        <ScrollLink
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}>
           <DownArrow src = '/images/arrow.png'/>
+          </ScrollLink>
         </Buttons>
       </Wrap>
      

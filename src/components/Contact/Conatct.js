@@ -43,7 +43,7 @@ const Contact = () => {
   };
 
   return (
-    <Container>
+    <Container id='contact'>
       <TextArea>
         <h2>Contact Me</h2>
         <p>Get In Touch or touch some grass</p>
