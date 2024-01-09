@@ -1,9 +1,12 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 import styled from 'styled-components';
-import { Link as ScrollLink } from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
+  
+
+
   return (
       <Wrap id='home'>
         <ItemText>
@@ -14,21 +17,15 @@ const Home = () => {
             <p style={{ fontSize: 'large', fontWeight: '520', paddingBottom: '15px'}}>At University of Maryland, College Park.</p>
           </Fade>
           <Fade bottom>
+          <Link to = '/story'> 
             <StoryButton>
                 My Story
             </StoryButton>
+            </Link>
           </Fade>
           
         </ItemText>
         <Buttons>
-        <ScrollLink
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}>
-          <DownArrow src = '/images/arrow.png'/>
-          </ScrollLink>
         </Buttons>
       </Wrap>
      
@@ -83,13 +80,3 @@ const StoryButton = styled.div`
 const Buttons = styled.div`
 padding-top: 92.5vh;
 text-align: center;`;
-
-const DownArrow = styled.img`
-
-  width: 40px;
-  height:40px;
-  display: flex;
-  justify-content: center;
-  overflow-x: hidden;
-  animation: animateDown infinite 1.5s;
-`

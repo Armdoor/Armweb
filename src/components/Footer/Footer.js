@@ -20,5 +20,6 @@ align-items: center;
 justify-content: center;
 font-weight: 300;
 font-size: medium;
+color: white;
 
 `

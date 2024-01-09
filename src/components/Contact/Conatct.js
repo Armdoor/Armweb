@@ -15,7 +15,7 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          toast.success('Message sent you bozo!', {
+          toast.success("You'll hear back soon. Thanks!", {
             position: 'bottom-center',
             autoClose: 5000,
             hideProgressBar: false,
@@ -46,7 +46,6 @@ const Contact = () => {
     <Container id='contact'>
       <TextArea>
         <h2>Contact Me</h2>
-        <p>Get In Touch or touch some grass</p>
       </TextArea>
       <StyledForm ref={form} onSubmit={sendEmail}>
         <input className='name' type='text' placeholder='Name' name='from_name' />
@@ -95,9 +94,8 @@ const TextArea = styled.div`
   font-weight: 600;
   padding-top: 3rem;
   margin-bottom: 1.5rem;
-  h2,
-  p {
-    color: white;
+  h2 {
+    color: #393c41;
   }
 `;
 
@@ -106,11 +104,23 @@ const StyledForm = styled.form`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  text-align: center;
   input,
   textarea,
   button {
     margin-bottom: 1rem;
+  }
+  input.name::placeholder {
+    color: #393c41;
+    font-weight: 300;
+  }
+  input.email::placeholder {
+    color: #393c41;
+    font-weight: 300;
+  }
+  textarea.msg::placeholder {
+    color: #393c41;
+    font-weight: 300;
   }
 
   input,
@@ -130,14 +140,16 @@ const StyledForm = styled.form`
     background: white;
     color: #393c41;
     font-weight: 800;
+    font-size: 1rem;
     margin: 1rem 0;
     padding: 0.75rem 1.5rem;
-    border: None;
+    border: none;
     border-radius: 2rem;
     transition: background-color 0.3s;
     &:hover {
-        color: white;
+      color: white;
       background-color: #393c41;
     }
   }
+
 `;

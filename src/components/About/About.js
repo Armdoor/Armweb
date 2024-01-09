@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
-import { Link as ScrollLink } from 'react-scroll';
+
 const About = () => {
   return (
      <Container id='about'>
@@ -31,16 +31,6 @@ const About = () => {
             </Card>
             </Fade>
         </Cards>
-
-
-        <ScrollLink
-              to="link"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}>
-          <DownArrow src = '/images/arrow.png'/></ScrollLink>
-
      </Container>
   )
 }
@@ -91,15 +81,3 @@ background-color: rgba(255, 255, 255, 0.5);`
 
 
 
-const DownArrow = styled.img`
-width: 40px;
-height: 40px;
-position: absolute;
-bottom: 20px; /* Adjust this value based on your preference */
-left: 50%;
-transform: translateX(-50%);
-display: flex;
-justify-content: center;
-overflow-x: hidden;
-animation: animateDown infinite 1.5s;
-`

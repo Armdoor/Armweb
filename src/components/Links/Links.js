@@ -1,45 +1,43 @@
 import React from 'react'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
-import { Link as ScrollLink } from 'react-scroll';
-
+import { Link } from 'react-router-dom';
 const Links = () => {
   return (
       <Container id='link'>
         <Fade top>
         <TextArea>
-            <h2>Work</h2>
+            <h2>Links</h2>
         </TextArea>
         </Fade>
         <Buttons>
             <Fade left>
-            <Button>
-                <img src="/images/resume.png" alt='Resume'  href="https://github.com/Armdoor/Resume/blob/main/Final_res.pdf"></img>
+            <Button href="https://github.com/Armdoor/Resume/blob/main/Final_res.pdf">
+                <img src="/images/resume.png" alt='Resume'  ></img>
                 
             </Button>
             </Fade>
             <Fade left>
-            <Button>
-                <img src="/images/git.png" alt='Github'  href="https://github.com/Armdoor"></img>
+            <Button href="https://github.com/Armdoor">
+                <img src="/images/git.png" alt='Github'  ></img>
                 
             </Button>
             </Fade>
             <Fade right>
-            <Button>
-                <img src="/images/linkedin.png" alt='Linkedin'  href="https://www.linkedin.com/in/akshit-sanoria/"></img>
+            <Button href="https://www.linkedin.com/in/akshit-sanoria/">
+                <img src="/images/linkedin.png" alt='Linkedin'  ></img>
                 
             </Button>
             </Fade>
             <Fade right>
+            <Link to = '/school'> 
             <Button>
-                <img src="/images/school.png" alt='Resume'  href="#"></img>
-                
+                <img src="/images/school.png" alt='Resume'  ></img>
             </Button>
+            </Link>
             </Fade>
         </Buttons>
-        <ScrollLink to="contact" spy={true} smooth={true} offset={-70} duration={500}>
-          <DownArrow src = '/images/arrow.png'/>
-        </ScrollLink>
+
 
       </Container>
   )
@@ -76,9 +74,9 @@ const Buttons = styled.div`
     justify-content: center;
 `;
 
-const Button = styled.div`
+const Button = styled.a`
   height: 200px;
-  width: 200px; 
+  width: 200px;
   border-radius: 2rem;
   backdrop-filter: blur(2px);
   background-color: rgba(255, 255, 255, 0.5);
@@ -86,22 +84,17 @@ const Button = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0.75rem; 
+  margin: 0.75rem;
+  text-decoration: none; /* Add this line to remove the default underline */
+  color: inherit; /* Add this line to inherit the text color from the parent */
+  
+  &:hover {
+    background-color: #dcdcdc; /* Add a hover effect */
+  }
+
   img {
-    height: 150px; 
-    width: 150px; 
+    height: 150px;
+    width: 150px;
   }
 `;
 
-const DownArrow = styled.img`
-bottom: 10px;
-left: 50%;
-transform: translateX(-50%);
-width: 40px;
-height: 40px;
-display: flex;
-justify-content: center;
-overflow-x: hidden;
-animation: animateDown infinite 1.5s;
-
-`
