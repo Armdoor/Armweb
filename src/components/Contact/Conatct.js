@@ -75,7 +75,8 @@ const Contact = () => {
 export default Contact;
 
 const Container = styled.div`
-  height: calc(100vh - 4rem);
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
   width: 100vw;
   max-width: auto;
