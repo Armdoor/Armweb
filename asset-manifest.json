@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/akweb/static/css/main.1aa1b982.css",
+    "main.js": "/akweb/static/js/main.5d92a1e0.js",
+    "index.html": "/akweb/index.html",
+    "main.1aa1b982.css.map": "/akweb/static/css/main.1aa1b982.css.map",
+    "main.5d92a1e0.js.map": "/akweb/static/js/main.5d92a1e0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1aa1b982.css",
+    "static/js/main.5d92a1e0.js"
+  ]
+}
