@@ -32,7 +32,7 @@ const Links = () => {
             <Fade right>
             <Link to = '/school'> 
             <Button>
-                <img src="/images/school.png" alt='Resume'  ></img>
+                <img src="/images/school.png" alt='School'  ></img>
             </Button>
             </Link>
             </Fade>

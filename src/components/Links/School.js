@@ -1,12 +1,12 @@
 import React from 'react';
-import Header from '../Header/Header';
+import Linkheader from '../Linkheader/Linkheader';
 import styled from 'styled-components';
 import Footer from '../Footer/Footer';
 
 const School = () => {
   return (
     <Container>
-      <Header />
+      <Linkheader />
       <h1>University Of Maryland, College Park</h1>
 
       <Grid>
@@ -71,6 +71,7 @@ const Container = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   align-items: center;
+  justify-content: center;
   h1{
     padding-top: 10vh;
     padding-bottom: 30px;
